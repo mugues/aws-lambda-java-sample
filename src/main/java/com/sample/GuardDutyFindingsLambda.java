@@ -16,8 +16,6 @@ public class GuardDutyFindingsLambda implements RequestHandler<Object, String> {
     private static ObjectMapper mapper = new ObjectMapper();
     final AmazonEC2 ec2 = AmazonEC2ClientBuilder.defaultClient();
 
-
-
     static {
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
